@@ -7,7 +7,7 @@ output "Public_IP_Address" {
 # Network Interface Outputs
 output "Network_Interface_id" {
   description = "Web Linux VM Network Interface ID"
-  value = azurerm_network_interface.web_linuxvm_nic[*].id
+  value = azurerm_network_interface.web_linuxvm_nic.id
 }
 
 ## Network Interface Private IP Addresses
