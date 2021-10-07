@@ -32,7 +32,7 @@ resource "azurerm_linux_virtual_machine" "web-linux-vm" {
     public_key = file("${path.module}/ssh-keys/terraform-azure.pub")
   }
   os_disk {
-    name = "${self.web-linux-vm.name}-${random_string.myrandom.id}"
+    name = "web1-linux-vm-${random_string.myrandom.id}"
     caching = "ReadWrite"
     storage_account_type = "Standard_LRS"
   }
