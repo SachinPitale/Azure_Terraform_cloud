@@ -2,7 +2,7 @@
 # Resource-3 (Optional): Create Network Security Group and Associate to Linux VM Network Interface
 # Resource-1: Create Network Security Group (NSG)
 resource "azurerm_network_security_group" "web_linuxvm_nsg" {
-  name = "${azurerm_network_interface.web_linuxvm_nic}-nsg"
+  name = "${azurerm_network_interface.web_linuxvm_nic.name}-nsg"
   location = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name  
   
