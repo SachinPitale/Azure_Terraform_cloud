@@ -1,4 +1,5 @@
 # Resource-1: Create Public IP Address
+/*
 resource "azurerm_public_ip" "web_linuxvm_publicip" {
   name = "${local.resource_group_prefix}-web-linuxvm-publicip"
   resource_group_name = azurerm_resource_group.rg.name
@@ -8,3 +9,4 @@ resource "azurerm_public_ip" "web_linuxvm_publicip" {
   sku = "Standard"
   
 }
+*/

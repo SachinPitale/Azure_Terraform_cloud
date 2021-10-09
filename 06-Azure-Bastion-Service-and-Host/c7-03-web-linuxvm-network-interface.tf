@@ -7,7 +7,7 @@ resource "azurerm_network_interface" "web_linuxvm_nic" {
     name = "web1-linuxvm-ip-1"
     private_ip_address_allocation = "Dynamic"
     subnet_id = azurerm_subnet.websubnet.id
-    public_ip_address_id = azurerm_public_ip.web_linuxvm_publicip.id
+    #public_ip_address_id = azurerm_public_ip.web_linuxvm_publicip.id
   }
   
 }
