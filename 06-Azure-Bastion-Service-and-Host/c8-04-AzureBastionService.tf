@@ -22,7 +22,7 @@ resource "azurerm_public_ip" "bastion-service-public-ip" {
 # Resource-3: Azure Bastion Service Host
 
 resource "azurerm_bastion_host" "bastion-host-service" {
-  name = "${local.resource_name_prefix}-bastion-host-service"
+  name = "${local.resource_group_prefix}-bastion-host-service"
   resource_group_name = azurerm_resource_group.rg.name
   location = azurerm_resource_group.rg.location
   ip_configuration {

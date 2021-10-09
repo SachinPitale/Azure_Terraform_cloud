@@ -30,9 +30,9 @@ resource "azurerm_network_interface" "Bastion_host_nic" {
 
 resource "azurerm_linux_virtual_machine" "Bastion_host_linuxvm-1" {
   name = "${local.resource_group_prefix}-bastion_host_linuxvm"
-  computer_name = "Bastion_host_linuxvm-1" 
+  computer_name = "Bastion-host-linuxvm-1" 
   admin_username = "azureuser"
-  network_interface_ids = [ "azurerm_network_interface.Bastion_host_nic.id" ]
+  network_interface_ids = [ azurerm_network_interface.Bastion_host_nic.id ]
   size = "Standard_DS1_v2"
   resource_group_name = azurerm_resource_group.rg.name
   location = azurerm_resource_group.rg.location
