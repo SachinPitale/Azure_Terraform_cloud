@@ -6,7 +6,7 @@ resource "null_resource" "copy_file_to_bastion" {
   connection {
     type = "ssh"
     user = azurerm_linux_virtual_machine.Bastion_host_linuxvm-1.admin_username
-    host = azurerm_linux_virtual_machineBastion_host_linuxvm-1.public_ip_address
+    host = azurerm_linux_virtual_machine.Bastion_host_linuxvm-1.public_ip_address
     private_key = file("${path.module}/ssh-keys/terraform-azure.pem")
 
   } 
