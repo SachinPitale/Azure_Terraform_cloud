@@ -1,9 +1,10 @@
 ## Public IP Address
+/*
 output "Public_IP_Address" {
   description = "Web Linux VM Public Address"
   value = azurerm_public_ip.web_linuxvm_publicip.ip_address
 }
-
+*/
 # Network Interface Outputs
 output "Network_Interface_id" {
   description = "Web Linux VM Network Interface ID"
