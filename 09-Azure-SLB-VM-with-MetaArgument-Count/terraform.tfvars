@@ -15,6 +15,9 @@ app_subnet_address = ["10.20.11.0/24"]
 db_subnet_name = "dbsubnet"
 db_subnet_address = ["10.20.21.0/24"]
 
+bastion_subnet_name = "bastionsubnet"
+bastion_subnet_address = ["10.20.100.0/24"]
+
 
 web_linuxvm_instance_count = 5
 lb_inbound_nat_ports = ["1022", "2022", "3022", "4022", "5022"]
