@@ -2,7 +2,7 @@
 
 variable "web_linuxvm_instance_count" {
   description = "Web Linux VM Instance Count"
-  type = Number
+  type = number
   default = 1
   
 }
@@ -12,5 +12,5 @@ variable "web_linuxvm_instance_count" {
 variable "lb_inbound_nat_ports" {
   description = "Web LB Inbound NAT Ports List"
   type = list(string)
-  value = ["1022", "2022", "3022", "4022", "5022"]
+  default  = ["1022", "2022", "3022", "4022", "5022"]
 }
