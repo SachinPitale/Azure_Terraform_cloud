@@ -62,6 +62,6 @@ resource "azurerm_lb_rule" "web_1_rule" {
 resource "azurerm_network_interface_backend_address_pool_association" "web1_backend_pool_association" {
   network_interface_id = azurerm_network_interface.web_linuxvm_nic.id
   backend_address_pool_id = azurerm_lb_backend_address_pool.web1_backend_pool.id
-  ip_configuration_name = azurerm_network_interface.slb_web.web_linuxvm_nic.ip_configuration[0].name
+  ip_configuration_name = azurerm_network_interface.web_linuxvm_nic.ip_configuration[0].name
 
 }
