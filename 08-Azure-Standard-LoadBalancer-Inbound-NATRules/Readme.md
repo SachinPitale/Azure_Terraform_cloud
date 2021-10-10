@@ -10,7 +10,9 @@ description: Create Azure Standard Load Balancer Inbound NAT Rules using Terrafo
 3. Verify the SSH Connectivity to Web Linux VM using Load Balancer Public IP with port 1022
 
 
-
+## Architecture
 ![Alt text](arch/arch.PNG?raw=true "Demo")
 
-![Azure Resource Created by Terraform](arch/resources.PNG?raw=true "Demo")
+
+## Azure Resource Created by Terraform
+![Alt text](arch/resources.PNG?raw=true "Demo")
