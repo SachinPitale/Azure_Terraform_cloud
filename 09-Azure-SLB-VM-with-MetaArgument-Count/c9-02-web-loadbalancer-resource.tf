@@ -61,7 +61,7 @@ resource "azurerm_lb_rule" "web_1_rule" {
 
 resource "azurerm_network_interface_backend_address_pool_association" "web1_backend_pool_association" {
   count = var.web_linuxvm_instance_count
-  network_interface_id = element(azurerm_network_interface.web_linuxvm_nic.id, count.index)
+  network_interface_id = element(azurerm_network_interface.web_linuxvm_nic[*].id, count.index)
   backend_address_pool_id = azurerm_lb_backend_address_pool.web1_backend_pool.id
   ip_configuration_name = element(azurerm_network_interface.web_linuxvm_nic[*].ip_configuration[0].name, count.index)
 
