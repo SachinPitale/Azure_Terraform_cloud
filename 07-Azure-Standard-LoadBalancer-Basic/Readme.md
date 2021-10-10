@@ -20,4 +20,4 @@ description: Create Azure Bastion Host and Service using Terraform
 
 
 
-![Alt text](arch/arch.PNG?raw=true "Demo")
+#![Alt text](arch/arch.PNG?raw=true "Demo")
