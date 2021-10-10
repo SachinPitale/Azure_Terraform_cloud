@@ -1,22 +1,18 @@
 ---
-title: Azure Bastion Host and Service using Terraform
-description: Create Azure Bastion Host and Service using Terraform
+title: Azure Standard Load Balancer using Terraform
+description: Create Azure Standard Load Balancer using Terraform
 ---
 
 ## Introduction
-- We are going to create two important Bastion Resources 
-1. Azure Bastion Host 
-2. Azure Bastion Service 
-- We are going to use following Azure Resources for the same.
-1. Terraform Input Variables
-2. azurerm_public_ip
-3. azurerm_network_interface
-4. azurerm_linux_virtual_machine
-5. Terraform Null Resource `null_resource`
-6. Terraform File Provisioner
-7. Terraform remote-exec Provisioner
-8. azurerm_bastion_host
-9. Terraform Output Values
+- We are going to create Azure Standard Load Balancer Resources as part of this demo.
+1. azurerm_public_ip
+2. azurerm_lb
+3. azurerm_lb_backend_address_pool
+4. azurerm_lb_probe
+5. azurerm_lb_rule
+6. azurerm_network_interface_backend_address_pool_association
+7. Comment Azure Bastion Service as we already using Azure Bastion Host approach with Linux VM
+
 
 
 
