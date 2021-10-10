@@ -12,3 +12,5 @@ description: Create Azure Standard Load Balancer Inbound NAT Rules using Terrafo
 
 
 ![Alt text](arch/arch.PNG?raw=true "Demo")
+
+![Azure Resource Created by Terraform](arch/resources.PNG?raw=true "Demo")
