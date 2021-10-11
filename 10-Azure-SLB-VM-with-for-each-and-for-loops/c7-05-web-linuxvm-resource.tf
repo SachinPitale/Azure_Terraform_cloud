@@ -22,7 +22,7 @@ CUSTOM_DATA
 resource "azurerm_linux_virtual_machine" "web-linux-vm" {
   for_each = var.web_linuxvm_instance_count
   name = "${local.resource_group_prefix}-web1-linux-vm-${each.key}"
-  computer_name = [each.key]
+  computer_name = "web-${each.key}"
   admin_username = "azureuser"
   size = "Standard_DS1_v2"
   resource_group_name = azurerm_resource_group.rg.name
