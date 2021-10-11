@@ -1,13 +1,15 @@
 ---
-title: Azure Load Balancer Inbound NAT Rules using Terraform
-description: Create Azure Standard Load Balancer Inbound NAT Rules using Terraform
+title: Terraform Meta-Argument for_each and For Loops 
+description: Create multiple resources in Terraform and for_each
 ---
 
-## Introduction
-- We are going to create Inbound NAT Rule for Standard Load Balancer in this demo
-1. azurerm_lb_nat_rule
-2. azurerm_network_interface_nat_rule_association
-3. Verify the SSH Connectivity to Web Linux VM using Load Balancer Public IP with port 1022
+##  Introduction
+- Terraform Meta-Argument [for_each](https://www.terraform.io/docs/language/meta-arguments/for_each.html) for Azure Web Linux VMs and VM NIC
+- Terraform Meta-Argument [for_each](https://www.terraform.io/docs/language/meta-arguments/for_each.html) for Azure Standard Load Balancer
+- [Terraform for Expressions](https://www.terraform.io/docs/language/expressions/for.html)
+- [Terraform lookup function](https://www.terraform.io/docs/language/functions/lookup.html)
+- [Terraform keys function](https://www.terraform.io/docs/language/functions/keys.html)
+- [Terraform values function](https://www.terraform.io/docs/language/functions/values.html)
 
 
 ## Architecture
