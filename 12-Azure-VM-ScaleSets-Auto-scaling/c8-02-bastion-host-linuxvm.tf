@@ -83,5 +83,5 @@ resource "azurerm_linux_virtual_machine" "Bastion_host_linuxvm-1" {
     sku = "83-gen2"
     version = "latest"
   }
-  custom_data = base64encode(local.bastion_custom_datas)  
+  custom_data = base64encode(local.bastion_custom_data)  
 }
