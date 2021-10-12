@@ -1,13 +1,15 @@
 ---
-title: Azure Load Balancer Inbound NAT Rules using Terraform
-description: Create Azure Standard Load Balancer Inbound NAT Rules using Terraform
+title: Azure Virtual Machine Scale Sets with Terraform
+description: Create Azure Virtual Machine Scale Sets with Terraform
 ---
 
-## Introduction
-- We are going to create Inbound NAT Rule for Standard Load Balancer in this demo
-1. azurerm_lb_nat_rule
-2. azurerm_network_interface_nat_rule_association
-3. Verify the SSH Connectivity to Web Linux VM using Load Balancer Public IP with port 1022
+## Step-00: Introduction
+- Create Azure Virtual Machine Scale Sets
+- Associate Azure Virtual Machine Scale Sets with Azure Standard Load Balancer
+- Terraform Dynamic Blocks
+- Network Security Group with Inline Security Rules (Nested Blocks)
+- Inline Network Security Rules - Re-Implement with Dynamic Blocks
+
 
 
 ## Architecture
