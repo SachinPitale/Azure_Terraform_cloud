@@ -3,7 +3,7 @@ title: Azure Virtual Machine Scale Sets with Terraform
 description: Create Azure Virtual Machine Scale Sets with Terraform
 ---
 
-## Step-00: Introduction
+## Introduction
 - Create Azure Virtual Machine Scale Sets
 - Associate Azure Virtual Machine Scale Sets with Azure Standard Load Balancer
 - Terraform Dynamic Blocks
