@@ -19,4 +19,4 @@ bastion_subnet_name = "bastionsubnet"
 bastion_subnet_address = ["10.20.100.0/24"]
 
 
-web_vmss_nsg_inbound_ports = [22, 80, 443]
+web_vmss_nsg_inbound_port = [22, 80, 443]
