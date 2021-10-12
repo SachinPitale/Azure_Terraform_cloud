@@ -4,7 +4,7 @@
 
 # Locals Block for custom data
 locals {
-webvm_custom_data = <<CUSTOM_DATA
+bastion_custom_data = <<CUSTOM_DATA
 #!/bin/sh
 #sudo yum update -y
 sudo yum install -y httpd
@@ -83,5 +83,5 @@ resource "azurerm_linux_virtual_machine" "Bastion_host_linuxvm-1" {
     sku = "83-gen2"
     version = "latest"
   }
-  custom_data = base64encode(local.webvm_custom_data)  
+  custom_data = base64encode(local.bastion_custom_datas)  
 }
