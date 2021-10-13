@@ -213,9 +213,9 @@ resource "azurerm_monitor_autoscale_setting" "web_vmss_autoscale" {
     rule {
       scale_action {
         direction = "Increase"
-        cooldown = "ChangeCount"
+        cooldown = "PT5M"
         value = 1
-        type = "PT5M"
+        type = "ChangeCount"
 
         }
       metric_trigger {
