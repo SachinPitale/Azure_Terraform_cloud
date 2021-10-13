@@ -37,6 +37,6 @@ resource "azurerm_storage_blob" "web_page_blob" {
   storage_account_name = azurerm_storage_account.web_storage_account.name
   storage_container_name = azurerm_storage_container.web_storage_container.name
   type = "Block"
-  source = "${path.module}/app-scipts/${each.value}"
+  source = "${path.module}/app-scripts/${each.value}"
   
 }
