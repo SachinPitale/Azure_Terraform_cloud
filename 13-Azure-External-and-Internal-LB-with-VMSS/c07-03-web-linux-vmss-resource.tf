@@ -23,7 +23,7 @@ gpgcheck=1
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azure-cli.repo'
 sudo yum install -y azure-cli
 sudo cd /etc/httpd/conf.d
-sudo az storage blob download -c ${azurerm_storage_container.web_storage_container.name} -f /etc/httpd/conf.d/app1.conf -n app1.conf --account-name ${azurerm_storage_container.web_storage_container.name} --account-key ${azurerm_storage_container.web_storage_container.primary_access_key}
+sudo az storage blob download -c ${azurerm_storage_container.web_storage_container.name} -f /etc/httpd/conf.d/app1.conf -n app1.conf --account-name ${azurerm_storage_account.web_storage_container.name} --account-key ${azurerm_storage_account.web_storage_container.primary_access_key}
 sudo systemctl reload httpd
 /usr/sbin/setsebool -P httpd_can_network_connect 1 
 CUSTOM_DATA

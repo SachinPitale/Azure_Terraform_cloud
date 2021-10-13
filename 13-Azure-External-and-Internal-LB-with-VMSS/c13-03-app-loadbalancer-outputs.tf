@@ -1,9 +1,3 @@
-output "app1-lb_public_ip" {
-  description = "app loadbalancer public ip"
-  value = azurerm_public_ip.slb_app_public_ip.ip_address
-  
-}
-
 # Load Balancer ID
 output "app_lb_id" {
   description = "app loadbalancer id"
