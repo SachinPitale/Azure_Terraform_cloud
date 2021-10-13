@@ -40,7 +40,7 @@ Resource: azurerm_monitor_autoscale_setting
 3. LB `SYN Count` Increase and Decrease Rule
 
 
-## Step-07: Verify Resources
+##  Verify Resources
 ```t
 # Other Resources (Untouched)
 1. Resource Group 
