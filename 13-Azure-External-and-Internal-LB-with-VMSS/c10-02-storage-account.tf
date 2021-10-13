@@ -1,7 +1,7 @@
 # Resource-1: Create Azure Storage account
 
 resource "azurerm_storage_account" "web_storage_account" {
-  name = "${var.storage_account_name}-${random_string.myrandom.id}"
+  name = "${var.storage_account_name}${random_string.myrandom.id}"
   account_tier  = var.storage_account_tier
   account_kind = var.storage_account_kind
   account_replication_type = var.storage_account_replication_type
