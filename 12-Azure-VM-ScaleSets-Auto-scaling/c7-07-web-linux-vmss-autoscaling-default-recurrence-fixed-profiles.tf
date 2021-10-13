@@ -636,7 +636,7 @@ resource "azurerm_monitor_autoscale_setting" "web_vmss_autoscale" {
       }
       metric_trigger {
         metric_name        = "SYNCount"
-        metric_resource_id = azurerm_lb.web_lb.id
+        metric_resource_id = azurerm_lb.slb_web.id
         metric_namespace   = "Microsoft.Network/loadBalancers"                
         time_grain         = "PT1M"
         statistic          = "Average"
