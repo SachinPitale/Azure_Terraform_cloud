@@ -1,14 +1,5 @@
 # Resource-1: Create Public IP Address for Azure Load Balancer
 
-resource "azurerm_public_ip" "slb_app_public_ip" {
-  name = "${local.resource_group_prefix}-slb_app_public_ip_1"
-  resource_group_name = azurerm_resource_group.rg.name
-  location = azurerm_resource_group.rg.location
-  allocation_method = "Static"
-  sku = "Standard"
-  
-}
-
 # Resource-2: Create Azure Standard Load Balancer
 resource "azurerm_lb" "slb_app" {
   name = "${local.resource_group_prefix}-slb_app"
@@ -17,7 +8,9 @@ resource "azurerm_lb" "slb_app" {
   sku = "Standard"
   frontend_ip_configuration {
     name = "slb_app_public_ip_1"
-    public_ip_address_id = azurerm_public_ip.slb_app_public_ip.id
+    private_ip_address_allocation = "Static"
+    private_ip_address_version = "IPv4"
+    private_ip_address = "10.20.11.241"
   }
   
 }

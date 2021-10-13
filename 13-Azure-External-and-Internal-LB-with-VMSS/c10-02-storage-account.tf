@@ -32,7 +32,7 @@ locals {
 # Resource-3: httpd conf files upload to httpd-files-container
 
 resource "azurerm_storage_blob" "web_page_blob" {
-  for_each = local.httpd_conf_files
+  for_each = toset(local.httpd_conf_files)
   name = each.value
   storage_account_name = azurerm_storage_account.web_storage_account.name
   storage_container_name = azurerm_storage_container.web_storage_container.name
