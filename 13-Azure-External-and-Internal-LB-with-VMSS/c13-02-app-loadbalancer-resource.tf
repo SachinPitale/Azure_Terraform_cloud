@@ -8,6 +8,7 @@ resource "azurerm_lb" "slb_app" {
   sku = "Standard"
   frontend_ip_configuration {
     name = "slb_app_public_ip_1"
+    subnet_id = azurerm_subnet.appsubnet.id
     private_ip_address_allocation = "Static"
     private_ip_address_version = "IPv4"
     private_ip_address = "10.20.11.241"
