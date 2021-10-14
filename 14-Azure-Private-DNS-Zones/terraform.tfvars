@@ -30,5 +30,5 @@ static_website_index_document     = "index.html"
 static_website_error_404_document = "error.html"
 
 
-private_dns_zone_name = "ITdevinfra.com"
+private_dns_zone_name = "itdevinfra.com"
 app_slb_dns_a_record_name = "app-slb"
