@@ -1,7 +1,7 @@
 # Create a Null Resource and Provisioners
 
 
-
+/*
 resource "null_resource" "copy_file_to_bastion" {
   depends_on = [ azurerm_linux_virtual_machine.Bastion_host_linuxvm-1 ]
   # Connection Block for Provisioners to connect to Azure VM Instance
@@ -28,6 +28,6 @@ resource "null_resource" "copy_file_to_bastion" {
 
 }
 
-
+*/
 # Creation Time Provisioners - By default they are created during resource creations (terraform apply)
 # Destory Time Provisioners - Will be executed during "terraform destroy" command (when = destroy)
