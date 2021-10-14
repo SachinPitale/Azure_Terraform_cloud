@@ -5,8 +5,8 @@ description: Create Azure Private DNS Zones using Terraform
 
 ## Introduction
 ### Concepts
-1. Create Azure Private DNS Zone `terraformguru.com`
-2. Register the `Internal LB Static IP` to Private DNS name `applb.terraformguru.com`
+1. Create Azure Private DNS Zone `itdevinfra.com`
+2. Register the `Internal LB Static IP` to Private DNS name `app-slb.itdevinfra.com`
 3. Update the `app1.conf` which deploys on Web VMSS to Internal LB DNS Name instead of IP Address. 
 
 ### Azure Resources
