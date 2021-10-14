@@ -160,7 +160,7 @@ curl http://10.20.11.4
 
 # Sample Output
 [root@hr-dev-app-linuxvm ~]# curl http://10.1.11.4
-Welcome to stacksimplify - AppVM App1 - VM Hostname: hr-dev-app-linuxvm
+Welcome to - AppVM App1 - VM Hostname: hr-dev-app-linuxvm
 [root@hr-dev-app-linuxvm ~]# 
 
 # Exit from App VM
@@ -182,7 +182,7 @@ curl http://10.1.11.241
 
 ## Sample Ouptut
 [root@hr-dev-bastion-linuxvm tmp]# curl http://10.1.11.241
-Welcome to stacksimplify - AppVM App1 - VM Hostname: hr-dev-app-linuxvm
+Welcome to  - AppVM App1 - VM Hostname: hr-dev-app-linuxvm
 [root@hr-dev-bastion-linuxvm tmp]# 
 
 
@@ -212,7 +212,7 @@ curl http://10.20.11.241
 
 # Sample Output
 [root@hr-dev-web-linuxvm conf.d]# curl http://10.1.11.241
-Welcome to stacksimplify - AppVM App1 - VM Hostname: hr-dev-app-linuxvm
+Welcome to  - AppVM App1 - VM Hostname: hr-dev-app-linuxvm
 [root@hr-dev-web-linuxvm conf.d]# 
 
 # From Web VM Host - perform Curl Test using Web VM Private IP
@@ -221,7 +221,7 @@ curl http://10.20.1.4
 
 # Sample Output
 [root@hr-dev-web-linuxvm conf.d]# curl http://10.1.1.4
-Welcome to stacksimplify - AppVM App1 - VM Hostname: hr-dev-app-linuxvm
+Welcome to  - AppVM App1 - VM Hostname: hr-dev-app-linuxvm
 [root@hr-dev-web-linuxvm conf.d]# 
 
 # Access Application using Internet facing Azure Standard Load Balancer Public
