@@ -17,6 +17,7 @@ locals {
   frontend_ip_configuration_name = "${azurerm_virtual_network.vnet.name}-feip"
   listener_name                  = "${azurerm_virtual_network.vnet.name}-httplstn"
   request_routing_rule1_name      = "${azurerm_virtual_network.vnet.name}-rqrt-1"
+  url_path_map                   =  "${azurerm_virtual_network.vnet.name}-upm-app1-app2"
 
   # App1
   backend_address_pool_name_app1     = "${azurerm_virtual_network.vnet.name}-beap-app1"
