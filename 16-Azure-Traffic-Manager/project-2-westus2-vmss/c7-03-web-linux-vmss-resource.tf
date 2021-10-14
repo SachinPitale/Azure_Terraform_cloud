@@ -24,7 +24,6 @@ CUSTOM_DATA
 
 # Resource: Azure Linux Virtual Machine Scale Set - web1
 resource "azurerm_linux_virtual_machine_scale_set" "web_vmss" {
-  
   name = "${local.resource_group_prefix}-web-vmss"
   resource_group_name = azurerm_resource_group.rg.name
   location = azurerm_resource_group.rg.location
