@@ -30,3 +30,9 @@ terraform apply -auto-approve
 
 ## Azure Resource Created by Terraform
 ![Alt text](arch/resources.PNG?raw=true "Demo")
+
+## Application Gateway
+![Alt text](arch/AG.PNG?raw=true "Demo")
+
+
+
