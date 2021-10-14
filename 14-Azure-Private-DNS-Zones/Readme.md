@@ -219,8 +219,7 @@ http://<LB-Public-IP>/appvm/metadata.html
 ```
 
 
-##  Reverse Proxy Outbound open on RedHat VM Apache2
-```t
+
 
 
 ## Architecture
