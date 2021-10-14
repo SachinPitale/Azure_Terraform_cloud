@@ -28,7 +28,7 @@ resource "azurerm_traffic_manager_endpoint" "tm_endpoint_project1_eastus2" {
   profile_name = azurerm_traffic_manager_profile.web_app_profile.name
   type = "azureEndpoints"
   weight = 50
-  target_resource_id = data.erraform_remote_state.project1_eastus2.outputs.web_lb_public_ip_address_id
+  target_resource_id = data.terraform_remote_state.project1_eastus2.outputs.web_lb_public_ip_address_id
   
 }
 
