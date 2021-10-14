@@ -1,34 +1,17 @@
 ---
-title: Azure Internal Load Balancer using Terraform
-description: Create Azure Internal Load Balancer using Terraform
+title: Azure Private DNS Zones using Terraform
+description: Create Azure Private DNS Zones using Terraform
 ---
 
-
+## Introduction
 ### Concepts
-1. Azure Storage Account with Azure File Share to copy Apache Config Files to Web VMs from local desktop Terraform Working Directory
-2. Azure NAT Gateway for Outbound Connectivity from App VMs when associated to Internal LB (App LB)
-3. App Linux VMs placed in App Subnets
-4. Internal Standard Load Balancer (App LB)
+1. Create Azure Private DNS Zone `terraformguru.com`
+2. Register the `Internal LB Static IP` to Private DNS name `applb.terraformguru.com`
+3. Update the `app1.conf` which deploys on Web VMSS to Internal LB DNS Name instead of IP Address. 
+
 ### Azure Resources
-1. azurerm_storage_account
-2. azurerm_storage_container
-3. azurerm_storage_blob
-4. Terraform Input Variables
-5. Terraform locals block
-6. azurerm_public_ip
-7. azurerm_nat_gateway
-8. azurerm_subnet_nat_gateway_association
-9. azurerm_network_interface
-10. azurerm_linux_virtual_machine
-11. Terraform Output Values
-12. azurerm_lb
-13. azurerm_lb_backend_address_pool
-14. azurerm_lb_probe
-15. azurerm_lb_rule
-16. azurerm_network_interface_backend_address_pool_association
-17. terraform.tfvars
-
-
+1. azurerm_private_dns_zone
+2. azurerm_private_dns_a_record
 ##  Verify Resources Part-1
 - **Important-Note:**  It will take 5 to 10 minutes to provision all the commands outlined in VM Custom Data
 ```t
@@ -238,15 +221,6 @@ http://<LB-Public-IP>/appvm/metadata.html
 
 ##  Reverse Proxy Outbound open on RedHat VM Apache2
 ```t
-# Reference Link
-https://confluence.atlassian.com/bitbucketserverkb/permission-denied-in-apache-logs-when-used-as-a-reverse-proxy-790957647.html
-# Command
-/usr/sbin/setsebool -P httpd_can_network_connect 1
-```
-
-
-## Additional Reference
-- https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview
 
 
 ## Architecture
