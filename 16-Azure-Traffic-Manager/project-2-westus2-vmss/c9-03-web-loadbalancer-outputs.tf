@@ -19,3 +19,8 @@ output "web_lb_frontend_Ip" {
   value = [azurerm_lb.slb_web.frontend_ip_configuration] 
   
 }
+
+output "web_lb_public_ip_address_id" {
+  description = "Web Load Balancer Public Address Resource ID"
+  value = azurerm_public_ip.slb_web_public_ip.id
+}
