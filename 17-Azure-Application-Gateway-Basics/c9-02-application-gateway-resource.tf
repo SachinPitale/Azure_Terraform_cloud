@@ -1,7 +1,7 @@
 # Resource-1: Azure Application Gateway Public IP
 
 resource "azurerm_public_ip" "web_ag_publicip" {
-  name                = "${local.resource_name_prefix}-web-ag-publicip"
+  name                = "${local.resource_group_prefix}-web-ag-publicip"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   allocation_method   = "Static"
