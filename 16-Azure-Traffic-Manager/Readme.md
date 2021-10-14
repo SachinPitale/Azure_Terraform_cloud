@@ -76,3 +76,6 @@ terraform apply -auto-approve
 # Access Apps from both regions eastus2 and westus2
 http://<Traffic-Manager-DNS-Name>
 ```
+
+## Architecture
+![Alt text](arch/arch.PNG?raw=true "Demo")
