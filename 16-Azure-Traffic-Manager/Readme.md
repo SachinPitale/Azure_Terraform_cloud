@@ -1,31 +1,78 @@
 ---
-title: Terraform Remote State Storage & Locking
-description: Learn about Terraform Remote State Storage & Locking
+title: Azure Traffic Manager using Terraform
+description: Create Azure Traffic Manager using Terraform
 ---
+## Step-01: Introduction
+- Understand about [Terraform Remote State Datasource](https://www.terraform.io/docs/language/state/remote-state-data.html)
+- Terraform Remote State Storage Demo with two projects
 
-##  Create Azure Storage Account
-###  Create Resource Group
-- Go to Resource Groups -> Add 
-- **Resource Group:** terraform-backend-rg 
-- **Region:** East US
-- Click on **Review + Create**
-- Click on **Create**
+##  Project-1: Execute Terraform Commands
+```t
+# Change Directory 
+cd project-1-eastus2-vmss
+
+# Terraform Initialize
+terraform init
+
+# Terraform Validate
+terraform validate
+
+# Terraform Plan
+terraform plan
+
+# Terraform Apply
+terraform apply -auto-approve
+
+# Observation
+1. Verify all resources in eastus2 region
+2. Verify Storage Account - TFState file
+```
 
 
-###  Create Azure Storage Account
-- Go to Storage Accounts -> Add
-- **Resource Group:** terraform-backend-rg 
-- **Storage Account Name:** terraformdevpipeline (THIS NAME SHOULD BE UNIQUE ACROSS AZURE CLOUD)
-- **Region:** East US
-- **Performance:** Standard
-- **Redundancy:** Geo-Redundant Storage (GRS)
-- In `Data Protection`, check the option `Enable versioning for blobs`
-- REST ALL leave to defaults
-- Click on **Review + Create**
-- Click on **Create**
+## Project-2: Execute Terraform Commands
+```t
+# Change Directory 
+cd project-2-westus2-vmss
 
-###  Create Container in Azure Storage Account
-- Go to Storage Account -> `terraformdevpipeline` -> Containers -> `+Container`
-- **Name:** tfstatefiles
-- **Public Access Level:** Private (no anonymous access)
-- Click on **Create**
+# Terraform Initialize
+terraform init
+
+# Terraform Validate
+terraform validate
+
+# Terraform Plan
+terraform plan
+
+# Terraform Apply
+terraform apply -auto-approve
+
+# Observation
+1. Verify all resources in westus2 region
+2. Verify Storage Account - TFState file
+```
+
+
+## Project-3: Execute Terraform Commands
+```t
+# Change Directory 
+cd project-3-azure-traffic-manager
+
+# Terraform Initialize
+terraform init
+
+# Terraform Validate
+terraform validate
+
+# Terraform Plan
+terraform plan
+
+# Terraform Apply
+terraform apply -auto-approve
+
+# Observation
+1. Verify Azure Traffic Manager Resources
+2. Verify Storage Account - TFState file
+
+# Access Apps from both regions eastus2 and westus2
+http://<Traffic-Manager-DNS-Name>
+```
