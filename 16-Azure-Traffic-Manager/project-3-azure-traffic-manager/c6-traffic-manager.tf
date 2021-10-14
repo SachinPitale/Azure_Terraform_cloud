@@ -28,6 +28,19 @@ resource "azurerm_traffic_manager_endpoint" "tm_endpoint_project1_eastus2" {
   profile_name = azurerm_traffic_manager_profile.web_app_profile.name
   type = "azureEndpoints"
   weight = 50
-  target_resource_id = terraform_remote_state.project1_eastus2.output.web1-lb_public_ip
+  target_resource_id = terraform_remote_state.project1_eastus2.output.web_lb_public_ip_address_id
+  
+}
+
+
+# Traffic Manager Endpoint -  Project-2-WestUs2
+
+resource "azurerm_traffic_manager_endpoint" "tm_endpoint_project2_westus2" {
+  name = "tm-endpoint-project2-westus2"
+  resource_group_name = azurerm_resource_group.rg.name
+  profile_name = azurerm_traffic_manager_profile.web_app_profile.name
+  type = "azureEndpoints"
+  weight = 50
+  target_resource_id = terraform_remote_state.project2_westus2.output.web_lb_public_ip_address_id
   
 }
