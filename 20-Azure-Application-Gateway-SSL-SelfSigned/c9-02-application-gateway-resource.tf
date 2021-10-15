@@ -38,7 +38,7 @@ locals {
 # Resource-2: Azure Application Gateway - Standard
 resource "azurerm_application_gateway" "web_ag" {
   depends_on = [ azurerm_storage_blob.static_container_blob  ]  
-  name                = "${local.resource_name_prefix}-web-ag"
+  name                = "${local.resource_group_prefix}-web-ag"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
 # START: --------------------------------------- #
