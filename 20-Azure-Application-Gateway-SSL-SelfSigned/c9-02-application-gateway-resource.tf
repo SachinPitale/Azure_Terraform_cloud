@@ -132,7 +132,7 @@ resource "azurerm_application_gateway" "web_ag" {
 # SSL Certificate Block
   ssl_certificate {
     name = local.ssl_certificate_name
-    password = "kalyan"
+    password = "sachin"
     data = filebase64("${path.module}/ssl-self-signed/httpd.pfx")
   }
 
