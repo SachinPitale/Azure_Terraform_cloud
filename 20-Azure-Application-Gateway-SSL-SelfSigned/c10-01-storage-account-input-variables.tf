@@ -24,4 +24,3 @@ variable "static_website_error_404_document" {
   type        = string
 }
 
-    

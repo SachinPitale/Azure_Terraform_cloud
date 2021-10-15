@@ -1,7 +1,7 @@
 # Add Custom Data for Bastion Host which will install HTTPD related binaries.
 # This will install the Apache Bench tool for load testing.
 # This Apache Bench helps us to generate huge load on our Application to trigger Scale-Out and Scale-In events for Autoscaling
-
+/*
 # Locals Block for custom data
 locals {
 bastion_custom_data = <<CUSTOM_DATA
@@ -85,3 +85,5 @@ resource "azurerm_linux_virtual_machine" "Bastion_host_linuxvm-1" {
   }
   custom_data = base64encode(local.bastion_custom_data)  
 }
+
+*/

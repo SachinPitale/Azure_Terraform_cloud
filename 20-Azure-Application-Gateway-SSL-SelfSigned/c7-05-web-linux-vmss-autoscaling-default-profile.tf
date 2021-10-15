@@ -134,8 +134,8 @@ resource "azurerm_monitor_autoscale_setting" "web_vmss_autoscale" {
 
     }
 ###########  END: Available Memory Bytes Metric Rules  ###########  
+/*
 ###########  START: LB SYN Count Metric Rules - Just to Test scale-in, scale-out  ###########   
-    /*
     ## Scale-Out 
     rule {
       scale_action {
@@ -178,7 +178,7 @@ resource "azurerm_monitor_autoscale_setting" "web_vmss_autoscale" {
       }
     ###########  END: LB SYN Count Metric Rules  ###########  
     } # End of Profile-1
-   */
+*/
   }
   
 

@@ -1,6 +1,6 @@
 # Resource-1: Azure Application Gateway Public IP
 resource "azurerm_public_ip" "web_ag_publicip" {
-  name                = "${local.resource_group_prefix}-web-ag-publicip"
+  name                = "${local.resource_name_prefix}-web-ag-publicip"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   allocation_method   = "Static"
@@ -38,7 +38,7 @@ locals {
 # Resource-2: Azure Application Gateway - Standard
 resource "azurerm_application_gateway" "web_ag" {
   depends_on = [ azurerm_storage_blob.static_container_blob  ]  
-  name                = "${local.resource_group_prefix}-web-ag"
+  name                = "${local.resource_name_prefix}-web-ag"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
 # START: --------------------------------------- #
@@ -132,7 +132,7 @@ resource "azurerm_application_gateway" "web_ag" {
 # SSL Certificate Block
   ssl_certificate {
     name = local.ssl_certificate_name
-    password = "sachin"
+    password = "kalyan"
     data = filebase64("${path.module}/ssl-self-signed/httpd.pfx")
   }
 
