@@ -68,15 +68,14 @@ http://<AG-Public-IP>
 ![Alt text](arch/arch.PNG?raw=true "Demo")
 
 
-## AG Component
-![Alt text](arch/component.PNG?raw=true "Demo")
+
 
 
 ## Azure Resource Created by Terraform
 ![Alt text](arch/resources.PNG?raw=true "Demo")
 
-## Application Gateway
-![Alt text](arch/AG.PNG?raw=true "Demo")
+
+!
 
 
 
