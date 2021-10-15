@@ -58,7 +58,7 @@ resource "azurerm_key_vault_certificate" "my_cert_1" {
 
   certificate {
     contents = filebase64("${path.module}/ssl-self-signed/httpd.pfx")
-    password = "kalyan"
+    password = "sachin"
   }
   
   certificate_policy {
