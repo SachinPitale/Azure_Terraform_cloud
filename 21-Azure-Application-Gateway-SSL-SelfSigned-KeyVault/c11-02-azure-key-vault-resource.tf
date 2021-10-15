@@ -1,5 +1,7 @@
 # Datasource-1: To get Azure Tenant Id
-data "azurerm_client_config" "current" {}
+
+data "azurerm_client_config" "current" {
+}
 
 # Resource-1: Azure Key Vault
 resource "azurerm_key_vault" "keyvault" {
@@ -19,7 +21,7 @@ resource "azurerm_key_vault" "keyvault" {
 resource "azurerm_key_vault_access_policy" "key_vault_default_policy" {
   key_vault_id = azurerm_key_vault.keyvault.id
   tenant_id = data.azurerm_client_config.current.tenant_id
-  object_id = data.azurerm_client_config.current.object_id
+  object_id = data.azurerm_client_config.current.client_id
   lifecycle {
     create_before_destroy = true
   }  
