@@ -30,7 +30,7 @@ ssh -i ssh-keys/terraform-azure.pem azureuser@<Bastion-Public-IP>
 sudo su - 
 
 # Connect to MySQL DB
-mysql -h hr-dev-mysql.mysql.database.azure.com -u dbadmin@hr-dev-mysql -p 
+mysql -h it-dev-mysql.mysql.database.azure.com -u dbadmin@it-dev-mysql -p 
 
 # DB Password to use
 mysql_db_password = "H@Sh1CoR3!"
@@ -40,7 +40,7 @@ ssh -i /tmp/terraform-azure.pem azureuser@<VMSS-VM1-Private-IP>
 ssh -i /tmp/terraform-azure.pem azureuser@10.1.1.6
 
 # Connect to MySQL DB from Web VMSS VM1 or VM2 (This happens via Virtual Network we created from Web Subnet to MySQL Server)
-mysql -h hr-dev-mysql.mysql.database.azure.com -u dbadmin@hr-dev-mysql -p 
+mysql -h it-dev-mysql.mysql.database.azure.com -u dbadmin@it-dev-mysql -p 
 ```
 
 ## Additional Reference
