@@ -19,5 +19,29 @@ description: Create Azure MySQL Single Server using Terraform
 3. azurerm_mysql_firewall_rule
 4. azurerm_mysql_virtual_network_rule
 
+
+
+## Connect to MySQL DB from Bastion Host VM and VMSS VM
+- Test from Bastion Host which confirms our Azure MySQL firewall rule test
+- Test from VMSS VM1 or VM2 confirms that our `Azure MySQL Virtual Network rule` and `Web Subnet Service Endpoint Configs` we have enabled private communication from `Web Subnet hosted VM's to Azure MySQL Single Server`
+```t
+# SSH to Bastion Host
+ssh -i ssh-keys/terraform-azure.pem azureuser@<Bastion-Public-IP>
+sudo su - 
+
+# Connect to MySQL DB
+mysql -h hr-dev-mysql.mysql.database.azure.com -u dbadmin@hr-dev-mysql -p 
+
+# DB Password to use
+mysql_db_password = "H@Sh1CoR3!"
+
+# SSH to Web VMSS VM1 or VM2
+ssh -i /tmp/terraform-azure.pem azureuser@<VMSS-VM1-Private-IP>
+ssh -i /tmp/terraform-azure.pem azureuser@10.1.1.6
+
+# Connect to MySQL DB from Web VMSS VM1 or VM2 (This happens via Virtual Network we created from Web Subnet to MySQL Server)
+mysql -h hr-dev-mysql.mysql.database.azure.com -u dbadmin@hr-dev-mysql -p 
+```
+
 ## Additional Reference
 - [Use Virtual Network service endpoints and rules for Azure Database for MySQL](https://docs.microsoft.com/en-us/azure/mysql/concepts-data-access-and-security-vnet)
